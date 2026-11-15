@@ -21,14 +21,14 @@ jobs:
 
             - name : Install Dependencies
               run : |
-                pythom -m pip install --upgrade pip
-                pip install -r requirements.txt
+                pythom3 -m pip install --upgrade pip
+                python3 -m pip install -r requirements.txt
 
             -  name : Code Quality Check
-               run : flake8 app.py test_app.py
+               run : pyhton3 -m flake8 app.py test_app.py
 
             - name : Run Tests
-              run : pytest
+              run : python3 -m pytest
 
    
 
